@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\X8WebAPI.props" />
+</Project>
