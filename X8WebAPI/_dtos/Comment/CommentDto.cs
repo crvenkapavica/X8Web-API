@@ -1,4 +1,6 @@
-﻿namespace X8WebAPI._dtos.Comment;
+﻿using X8WebAPI._dtos.Stock;
+
+namespace X8WebAPI._dtos.Comment;
 
 public class CommentDto
 {

@@ -1,6 +1,6 @@
 ﻿namespace X8WebAPI._dtos.Comment;
 
-public class UpsertCommentRequestDto
+public class UpsertCommentDto
 {
     public string Title { get; init; } = string.Empty;
     

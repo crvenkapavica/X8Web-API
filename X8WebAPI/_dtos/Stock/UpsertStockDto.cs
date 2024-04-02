@@ -1,6 +1,6 @@
 ﻿namespace X8WebAPI._dtos.Stock;
 
-public class UpsertStockRequestDto
+public class UpsertStockDto
 {
     public string Symbol { get; set; } = string.Empty;
     public string CompanyName { get; set; } = string.Empty;

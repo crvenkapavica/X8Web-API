@@ -12,7 +12,7 @@ public interface ICommentRepository
     
     Task<Comment> CreateAsync(Comment comment);
     
-    Task<Comment?> UpdateAsync(int id, UpsertCommentRequestDto comment);
+    Task<Comment?> UpdateAsync(int id, UpsertCommentDto comment);
     
     Task<Comment?> DeleteAsync(int id);
 }

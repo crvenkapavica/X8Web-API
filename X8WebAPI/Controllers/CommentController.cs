@@ -30,11 +30,11 @@ public class CommentController : ControllerBase
     {
         var comment = await _unitOfWork.Comment.GetByIdAsync(id);
         
-        return comment != null ? Ok(comment.ToCommentDto()) : NotFound();
+        return comment != null ? Ok(comment) : NotFound();
     }
 
     [HttpPost]
-    public async Task<IActionResult> Create([FromBody] UpsertCommentRequestDto commentDto)
+    public async Task<IActionResult> Create([FromBody] UpsertCommentDto commentDto)
     {
         var commentModel = await _unitOfWork.Comment.CreateAsync(commentDto.ToCommentFromDto());
 
@@ -42,7 +42,7 @@ public class CommentController : ControllerBase
     }
 
     [HttpPut("{id}")]
-    public async Task<IActionResult> Update([FromRoute] int id, [FromBody] UpsertCommentRequestDto commentDto)
+    public async Task<IActionResult> Update([FromRoute] int id, [FromBody] UpsertCommentDto commentDto)
     {
         var commentModel = await _unitOfWork.Comment.UpdateAsync(id, commentDto);
         

@@ -15,11 +15,12 @@ public static class StockMapper
             Purchase = stockModel.Purchase,
             LastDiv = stockModel.LastDiv,
             Industry = stockModel.Industry,
-            MarketCap = stockModel.MarketCap
+            MarketCap = stockModel.MarketCap,
+            Comments = stockModel.Comments.Select(c => c.ToCommentDto()).ToList(),
         };
     }
 
-    public static Stock ToStockFromRequestDto(this UpsertStockRequestDto stockDto)
+    public static Stock ToStockFromDto(this UpsertStockDto stockDto)
     {
         return new Stock
         {

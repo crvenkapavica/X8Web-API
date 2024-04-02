@@ -8,6 +8,6 @@ public interface IStockRepository
     Task<List<Stock>> GetAllAsync();
     Task<Stock?> GetByIdAsync(int id);
     Task<Stock> CreateAsync(Stock stockModel);
-    Task<Stock?> UpdateAsync(int id, UpsertStockRequestDto stockDto);
+    Task<Stock?> UpdateAsync(int id, UpsertStockDto stockDto);
     Task<Stock?> DeleteAsync(int id);
 }

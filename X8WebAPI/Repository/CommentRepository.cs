@@ -18,12 +18,12 @@ public class CommentRepository : ICommentRepository
     
     public async Task<List<Comment>> GetAllAsync()
     {
-        return await _db.Comments.ToListAsync();
+        return await _db.Comments.Include(c => c.Stock).ToListAsync();
     }
 
     public async Task<Comment?> GetByIdAsync(int id)
     {
-        return await _db.Comments.FindAsync(id);
+        return await _db.Comments.Include(c => c.Stock).FirstOrDefaultAsync(c => c.Id == id);
     }
 
     public async Task<Comment> CreateAsync(Comment comment)
@@ -34,7 +34,7 @@ public class CommentRepository : ICommentRepository
         return comment;
     }
 
-    public async Task<Comment?> UpdateAsync(int id, UpsertCommentRequestDto commentDto)
+    public async Task<Comment?> UpdateAsync(int id, UpsertCommentDto commentDto)
     {
         var commentModel = await _db.Comments.FindAsync(id);
 
