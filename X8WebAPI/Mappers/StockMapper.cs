@@ -1,7 +1,7 @@
 ﻿using X8WebAPI._dtos.Stock;
 using X8WebAPI._models;
 
-namespace X8WebAPI.mappers;
+namespace X8WebAPI.Mappers;
 
 public static class StockMapper
 {

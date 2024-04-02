@@ -1,5 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using X8WebAPI._data;
+using X8WebAPI.Repository;
+using X8WebAPI.Repository.IRepository;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,6 +14,8 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
 
+builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowAngularApp", policy =>
@@ -21,7 +25,6 @@ builder.Services.AddCors(options =>
             .AllowAnyHeader();
     });
 });
-
 
 var app = builder.Build();
 
