@@ -34,17 +34,16 @@ public class StockController : ControllerBase
     }
 
     [HttpPost]
-    public async Task<IActionResult> Create([FromBody] CreateStockRequestDto stockDto)
+    public async Task<IActionResult> Create([FromBody] UpsertStockRequestDto stockDto)
     {
-        var stockModel = stockDto.ToStockFromRequestDto();
-        await _unitOfWork.Stock.CreateAsync(stockModel);
+        var stockModel = await _unitOfWork.Stock.CreateAsync(stockDto.ToStockFromRequestDto());
         
         return CreatedAtAction(nameof(GetById), new { id = stockModel.Id }, stockModel.ToStockDto());
     }
 
     [HttpPut]
     [Route("{id}")]
-    public async Task<IActionResult> Update([FromRoute] int id, [FromBody] UpdateStockRequestDto stockDto)
+    public async Task<IActionResult> Update([FromRoute] int id, [FromBody] UpsertStockRequestDto stockDto)
     {
         var stockModel = await _unitOfWork.Stock.UpdateAsync(id, stockDto);
 

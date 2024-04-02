@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("X8WebAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c033d2f76106a8c16a9e7731f2f8c977e05df8ad")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+13bf083dd6811d2c04521639a9bc3d928c299b52")]
 [assembly: System.Reflection.AssemblyProductAttribute("X8WebAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("X8WebAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

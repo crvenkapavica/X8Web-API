@@ -27,15 +27,15 @@ public class StockRepository : IStockRepository
         return await _db.Stocks.FindAsync(id);
     }
 
-    public async Task<Stock> CreateAsync(Stock stockModel)
+    public async Task<Stock> CreateAsync(Stock stock)
     {
-        await _db.Stocks.AddAsync(stockModel);
+        await _db.Stocks.AddAsync(stock);
         await _db.SaveChangesAsync();
         
-        return stockModel;
+        return stock;
     }
 
-    public async Task<Stock?> UpdateAsync(int id, UpdateStockRequestDto stockDto)
+    public async Task<Stock?> UpdateAsync(int id, UpsertStockRequestDto stockDto)
     {
         var stockModel = await _db.Stocks.FindAsync(id);
 

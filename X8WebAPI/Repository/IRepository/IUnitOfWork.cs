@@ -3,4 +3,6 @@
 public interface IUnitOfWork
 {
     public IStockRepository Stock { get; }
+    
+    public ICommentRepository Comment { get; }
 }
