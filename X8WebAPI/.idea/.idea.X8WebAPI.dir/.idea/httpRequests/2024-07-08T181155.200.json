@@ -1,0 +1,405 @@
+[
+  {
+    "id": 8,
+    "title": "Test Title 222",
+    "content": "Content 2222",
+    "createdOn": "2022-06-15T00:00:00",
+    "stockId": 33,
+    "stock": {
+      "id": 33,
+      "symbol": "XRXS",
+      "companyName": "Xerxs's",
+      "purchase": 360.10,
+      "lastDiv": 1.80,
+      "industry": "Technology",
+      "marketCap": 123100092,
+      "comments": [
+        {
+          "id": 10,
+          "title": "string",
+          "content": "string",
+          "createdOn": "2024-04-03T08:53:17.162",
+          "stockId": 33
+        },
+        {
+          "id": 14,
+          "title": "NEW POST",
+          "content": "NEW POST CONTENT",
+          "createdOn": "2024-04-03T11:33:23.027566",
+          "stockId": 33
+        },
+        {
+          "id": 19,
+          "title": "33test",
+          "content": "url test",
+          "createdOn": "2024-04-03T11:47:59.6177147",
+          "stockId": 33
+        }
+      ]
+    }
+  },
+  {
+    "id": 10,
+    "title": "string",
+    "content": "string",
+    "createdOn": "2024-04-03T08:53:17.162",
+    "stockId": 33,
+    "stock": {
+      "id": 33,
+      "symbol": "XRXS",
+      "companyName": "Xerxs's",
+      "purchase": 360.10,
+      "lastDiv": 1.80,
+      "industry": "Technology",
+      "marketCap": 123100092,
+      "comments": [
+        {
+          "id": 8,
+          "title": "Test Title 222",
+          "content": "Content 2222",
+          "createdOn": "2022-06-15T00:00:00",
+          "stockId": 33
+        },
+        {
+          "id": 14,
+          "title": "NEW POST",
+          "content": "NEW POST CONTENT",
+          "createdOn": "2024-04-03T11:33:23.027566",
+          "stockId": 33
+        },
+        {
+          "id": 19,
+          "title": "33test",
+          "content": "url test",
+          "createdOn": "2024-04-03T11:47:59.6177147",
+          "stockId": 33
+        }
+      ]
+    }
+  },
+  {
+    "id": 11,
+    "title": "asd",
+    "content": "abc",
+    "createdOn": "2024-04-03T10:00:10.0357838",
+    "stockId": 1,
+    "stock": {
+      "id": 1,
+      "symbol": "AMZN",
+      "companyName": "AMAZON",
+      "purchase": 0.00,
+      "lastDiv": 0.00,
+      "industry": "BOOK-SELLING",
+      "marketCap": 0,
+      "comments": [
+        {
+          "id": 15,
+          "title": "Test id param",
+          "content": "Test id param content",
+          "createdOn": "2024-04-03T11:35:59.4408128",
+          "stockId": 1
+        },
+        {
+          "id": 16,
+          "title": "test 1",
+          "content": "test 1",
+          "createdOn": "2024-04-03T11:44:33.9961786",
+          "stockId": 1
+        },
+        {
+          "id": 17,
+          "title": "test 1 agen",
+          "content": "test 1 agen",
+          "createdOn": "2024-04-03T11:45:23.7708191",
+          "stockId": 1
+        },
+        {
+          "id": 18,
+          "title": "test 1 agen",
+          "content": "1 agen test",
+          "createdOn": "2024-04-03T11:46:14.6101144",
+          "stockId": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": 14,
+    "title": "NEW POST",
+    "content": "NEW POST CONTENT",
+    "createdOn": "2024-04-03T11:33:23.027566",
+    "stockId": 33,
+    "stock": {
+      "id": 33,
+      "symbol": "XRXS",
+      "companyName": "Xerxs's",
+      "purchase": 360.10,
+      "lastDiv": 1.80,
+      "industry": "Technology",
+      "marketCap": 123100092,
+      "comments": [
+        {
+          "id": 8,
+          "title": "Test Title 222",
+          "content": "Content 2222",
+          "createdOn": "2022-06-15T00:00:00",
+          "stockId": 33
+        },
+        {
+          "id": 10,
+          "title": "string",
+          "content": "string",
+          "createdOn": "2024-04-03T08:53:17.162",
+          "stockId": 33
+        },
+        {
+          "id": 19,
+          "title": "33test",
+          "content": "url test",
+          "createdOn": "2024-04-03T11:47:59.6177147",
+          "stockId": 33
+        }
+      ]
+    }
+  },
+  {
+    "id": 15,
+    "title": "Test id param",
+    "content": "Test id param content",
+    "createdOn": "2024-04-03T11:35:59.4408128",
+    "stockId": 1,
+    "stock": {
+      "id": 1,
+      "symbol": "AMZN",
+      "companyName": "AMAZON",
+      "purchase": 0.00,
+      "lastDiv": 0.00,
+      "industry": "BOOK-SELLING",
+      "marketCap": 0,
+      "comments": [
+        {
+          "id": 11,
+          "title": "asd",
+          "content": "abc",
+          "createdOn": "2024-04-03T10:00:10.0357838",
+          "stockId": 1
+        },
+        {
+          "id": 16,
+          "title": "test 1",
+          "content": "test 1",
+          "createdOn": "2024-04-03T11:44:33.9961786",
+          "stockId": 1
+        },
+        {
+          "id": 17,
+          "title": "test 1 agen",
+          "content": "test 1 agen",
+          "createdOn": "2024-04-03T11:45:23.7708191",
+          "stockId": 1
+        },
+        {
+          "id": 18,
+          "title": "test 1 agen",
+          "content": "1 agen test",
+          "createdOn": "2024-04-03T11:46:14.6101144",
+          "stockId": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": 16,
+    "title": "test 1",
+    "content": "test 1",
+    "createdOn": "2024-04-03T11:44:33.9961786",
+    "stockId": 1,
+    "stock": {
+      "id": 1,
+      "symbol": "AMZN",
+      "companyName": "AMAZON",
+      "purchase": 0.00,
+      "lastDiv": 0.00,
+      "industry": "BOOK-SELLING",
+      "marketCap": 0,
+      "comments": [
+        {
+          "id": 11,
+          "title": "asd",
+          "content": "abc",
+          "createdOn": "2024-04-03T10:00:10.0357838",
+          "stockId": 1
+        },
+        {
+          "id": 15,
+          "title": "Test id param",
+          "content": "Test id param content",
+          "createdOn": "2024-04-03T11:35:59.4408128",
+          "stockId": 1
+        },
+        {
+          "id": 17,
+          "title": "test 1 agen",
+          "content": "test 1 agen",
+          "createdOn": "2024-04-03T11:45:23.7708191",
+          "stockId": 1
+        },
+        {
+          "id": 18,
+          "title": "test 1 agen",
+          "content": "1 agen test",
+          "createdOn": "2024-04-03T11:46:14.6101144",
+          "stockId": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": 17,
+    "title": "test 1 agen",
+    "content": "test 1 agen",
+    "createdOn": "2024-04-03T11:45:23.7708191",
+    "stockId": 1,
+    "stock": {
+      "id": 1,
+      "symbol": "AMZN",
+      "companyName": "AMAZON",
+      "purchase": 0.00,
+      "lastDiv": 0.00,
+      "industry": "BOOK-SELLING",
+      "marketCap": 0,
+      "comments": [
+        {
+          "id": 11,
+          "title": "asd",
+          "content": "abc",
+          "createdOn": "2024-04-03T10:00:10.0357838",
+          "stockId": 1
+        },
+        {
+          "id": 15,
+          "title": "Test id param",
+          "content": "Test id param content",
+          "createdOn": "2024-04-03T11:35:59.4408128",
+          "stockId": 1
+        },
+        {
+          "id": 16,
+          "title": "test 1",
+          "content": "test 1",
+          "createdOn": "2024-04-03T11:44:33.9961786",
+          "stockId": 1
+        },
+        {
+          "id": 18,
+          "title": "test 1 agen",
+          "content": "1 agen test",
+          "createdOn": "2024-04-03T11:46:14.6101144",
+          "stockId": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": 18,
+    "title": "test 1 agen",
+    "content": "1 agen test",
+    "createdOn": "2024-04-03T11:46:14.6101144",
+    "stockId": 1,
+    "stock": {
+      "id": 1,
+      "symbol": "AMZN",
+      "companyName": "AMAZON",
+      "purchase": 0.00,
+      "lastDiv": 0.00,
+      "industry": "BOOK-SELLING",
+      "marketCap": 0,
+      "comments": [
+        {
+          "id": 11,
+          "title": "asd",
+          "content": "abc",
+          "createdOn": "2024-04-03T10:00:10.0357838",
+          "stockId": 1
+        },
+        {
+          "id": 15,
+          "title": "Test id param",
+          "content": "Test id param content",
+          "createdOn": "2024-04-03T11:35:59.4408128",
+          "stockId": 1
+        },
+        {
+          "id": 16,
+          "title": "test 1",
+          "content": "test 1",
+          "createdOn": "2024-04-03T11:44:33.9961786",
+          "stockId": 1
+        },
+        {
+          "id": 17,
+          "title": "test 1 agen",
+          "content": "test 1 agen",
+          "createdOn": "2024-04-03T11:45:23.7708191",
+          "stockId": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": 19,
+    "title": "33test",
+    "content": "url test",
+    "createdOn": "2024-04-03T11:47:59.6177147",
+    "stockId": 33,
+    "stock": {
+      "id": 33,
+      "symbol": "XRXS",
+      "companyName": "Xerxs's",
+      "purchase": 360.10,
+      "lastDiv": 1.80,
+      "industry": "Technology",
+      "marketCap": 123100092,
+      "comments": [
+        {
+          "id": 8,
+          "title": "Test Title 222",
+          "content": "Content 2222",
+          "createdOn": "2022-06-15T00:00:00",
+          "stockId": 33
+        },
+        {
+          "id": 10,
+          "title": "string",
+          "content": "string",
+          "createdOn": "2024-04-03T08:53:17.162",
+          "stockId": 33
+        },
+        {
+          "id": 14,
+          "title": "NEW POST",
+          "content": "NEW POST CONTENT",
+          "createdOn": "2024-04-03T11:33:23.027566",
+          "stockId": 33
+        }
+      ]
+    }
+  },
+  {
+    "id": 20,
+    "title": "test2",
+    "content": "test2",
+    "createdOn": "2024-04-03T11:49:33.9472335",
+    "stockId": 2,
+    "stock": {
+      "id": 2,
+      "symbol": "ANG",
+      "companyName": "ANGULAR V17 ASYNC",
+      "purchase": 200.00,
+      "lastDiv": 5.00,
+      "industry": "Free-lance Technology",
+      "marketCap": 300000001,
+      "comments": []
+    }
+  }
+]

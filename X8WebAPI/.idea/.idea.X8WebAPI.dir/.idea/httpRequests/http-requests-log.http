@@ -1,4 +1,14 @@
-﻿GET http://localhost:5217/api/Stock/1
+﻿GET http://localhost:5217/api/Comment
+User-Agent: IntelliJ HTTP Client/JetBrains Rider 2024.2 EAP 5
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2024-07-08T181155.200.json
+
+###
+
+GET http://localhost:5217/api/Stock/1
 Accept: application/json
 Connection: Keep-Alive
 User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)

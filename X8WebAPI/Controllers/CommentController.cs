@@ -9,21 +9,14 @@ namespace X8WebAPI.Controllers;
 
 [Route("api/[controller]")]
 [ApiController]
-public class CommentController : ControllerBase
+public class CommentController(IUnitOfWork unitOfWork) : ControllerBase
 {
-    private readonly IUnitOfWork _unitOfWork;
-
-    public CommentController(IUnitOfWork unitOfWork)
-    {
-        _unitOfWork = unitOfWork;
-    }
-
     [HttpGet]
     public async Task<IActionResult> GetAll()
     {
         if (!ModelState.IsValid) return BadRequest(ModelState);
         
-        var comments = await _unitOfWork.Comment.GetAllAsync();
+        var comments = await unitOfWork.Comment.GetAllAsync();
         return Ok(comments);
     }
 
@@ -32,7 +25,7 @@ public class CommentController : ControllerBase
     {
         if (!ModelState.IsValid) return BadRequest(ModelState);
         
-        var comment = await _unitOfWork.Comment.GetByIdAsync(id);
+        var comment = await unitOfWork.Comment.GetByIdAsync(id);
         return comment != null ? Ok(comment) : NotFound();
     }
     
@@ -40,9 +33,9 @@ public class CommentController : ControllerBase
     public async Task<IActionResult> Create([FromRoute] int stockId, [FromBody] UpsertCommentDto commentDto)
     {
         if (!ModelState.IsValid) return BadRequest(ModelState);
-        if (!await _unitOfWork.Stock.Exists(stockId)) return BadRequest("The stock doesnt exist!");
+        if (!await unitOfWork.Stock.Exists(stockId)) return BadRequest("The stock doesnt exist!");
     
-        var commentModel = await _unitOfWork.Comment.CreateAsync(commentDto.ToCommentFromDto(stockId));
+        var commentModel = await unitOfWork.Comment.CreateAsync(commentDto.ToCommentFromDto(stockId));
         return CreatedAtAction(nameof(GetById), new { id = commentModel.Id }, commentModel.ToCommentDto());
     }
     
@@ -51,7 +44,7 @@ public class CommentController : ControllerBase
     {
         if (!ModelState.IsValid) return BadRequest(ModelState);
         
-        var commentModel = await _unitOfWork.Comment.UpdateAsync(id, commentDto);
+        var commentModel = await unitOfWork.Comment.UpdateAsync(id, commentDto);
         return commentModel != null ? Ok(commentModel.ToCommentDto()) : NotFound();
     }
 
@@ -60,7 +53,7 @@ public class CommentController : ControllerBase
     {
         if (!ModelState.IsValid) return BadRequest(ModelState);
         
-        var comment = await _unitOfWork.Comment.DeleteAsync(id);
+        var comment = await unitOfWork.Comment.DeleteAsync(id);
         return NoContent();
     }
 }

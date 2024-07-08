@@ -9,26 +9,19 @@ namespace X8WebAPI.Controllers;
 
 [Route("api/[controller]")]
 [ApiController]
-public class StockController : ControllerBase
+public class StockController(IUnitOfWork unitOfWork) : ControllerBase
 {
-    private readonly IUnitOfWork _unitOfWork;
-
-    public StockController(IUnitOfWork unitOfWork)
-    {
-        _unitOfWork = unitOfWork;
-    }
-
     [HttpGet]
     public async Task<IActionResult> GetAll()
     {
-        var stocks = await _unitOfWork.Stock.GetAllAsync();
+        var stocks = await unitOfWork.Stock.GetAllAsync();
         return Ok(stocks);
     }
 
     [HttpGet("{id=int}")]
     public async Task<IActionResult> GetById([FromRoute] int id)
     {
-        var stock = await _unitOfWork.Stock.GetByIdAsync(id);
+        var stock = await unitOfWork.Stock.GetByIdAsync(id);
         
         return stock != null ? Ok(stock) : NotFound();
     }
@@ -36,7 +29,7 @@ public class StockController : ControllerBase
     [HttpPost]
     public async Task<IActionResult> Create([FromBody] UpsertStockDto stockDto)
     {
-        var stockModel = await _unitOfWork.Stock.CreateAsync(stockDto.ToStockFromDto());
+        var stockModel = await unitOfWork.Stock.CreateAsync(stockDto.ToStockFromDto());
         
         return CreatedAtAction(nameof(GetById), new { id = stockModel.Id }, stockModel.ToStockDto());
     }
@@ -44,7 +37,7 @@ public class StockController : ControllerBase
     [HttpPut("{id=int}")]
     public async Task<IActionResult> Update([FromRoute] int id, [FromBody] UpsertStockDto stockDto)
     {
-        var stockModel = await _unitOfWork.Stock.UpdateAsync(id, stockDto);
+        var stockModel = await unitOfWork.Stock.UpdateAsync(id, stockDto);
         
         return stockModel != null ? Ok(stockModel.ToStockDto()) : NotFound();
     }
@@ -52,7 +45,7 @@ public class StockController : ControllerBase
     [HttpDelete("{id=int}")]
     public async Task<IActionResult> Delete([FromRoute] int id)
     {
-        var stockModel = await _unitOfWork.Stock.DeleteAsync(id);
+        var stockModel = await unitOfWork.Stock.DeleteAsync(id);
 
         if (stockModel == null) return NotFound();
 
