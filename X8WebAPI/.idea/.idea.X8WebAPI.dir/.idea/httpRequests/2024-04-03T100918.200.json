@@ -1,0 +1,18 @@
+﻿{
+  "id": 1,
+  "symbol": "AMZN",
+  "companyName": "AMAZON",
+  "purchase": 0.00,
+  "lastDiv": 0.00,
+  "industry": "BOOK-SELLING",
+  "marketCap": 0,
+  "comments": [
+    {
+      "id": 11,
+      "title": "asd",
+      "content": "abc",
+      "createdOn": "2024-04-03T10:00:10.0357838",
+      "stockId": 1
+    }
+  ]
+}

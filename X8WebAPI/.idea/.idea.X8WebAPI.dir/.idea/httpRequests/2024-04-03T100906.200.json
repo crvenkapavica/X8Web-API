@@ -1,0 +1,282 @@
+﻿[
+  {
+    "id": 1,
+    "symbol": "AMZN",
+    "companyName": "AMAZON",
+    "purchase": 0.00,
+    "lastDiv": 0.00,
+    "industry": "BOOK-SELLING",
+    "marketCap": 0,
+    "comments": [
+      {
+        "id": 11,
+        "title": "asd",
+        "content": "abc",
+        "createdOn": "2024-04-03T10:00:10.0357838",
+        "stockId": 1
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "symbol": "ANG",
+    "companyName": "ANGULAR V17 ASYNC",
+    "purchase": 200.00,
+    "lastDiv": 5.00,
+    "industry": "Free-lance Technology",
+    "marketCap": 300000001,
+    "comments": []
+  },
+  {
+    "id": 3,
+    "symbol": "AAPL",
+    "companyName": "Apple",
+    "purchase": 195.58,
+    "lastDiv": 2.10,
+    "industry": "Technology",
+    "marketCap": 100223,
+    "comments": []
+  },
+  {
+    "id": 4,
+    "symbol": "NVDA",
+    "companyName": "NVIDIA",
+    "purchase": 205.51,
+    "lastDiv": 2.48,
+    "industry": "Hardware",
+    "marketCap": 100223,
+    "comments": []
+  },
+  {
+    "id": 33,
+    "symbol": "XRXS",
+    "companyName": "Xerxs's",
+    "purchase": 360.10,
+    "lastDiv": 1.80,
+    "industry": "Technology",
+    "marketCap": 123100092,
+    "comments": [
+      {
+        "id": 1,
+        "title": "Test Title",
+        "content": "Test Contet",
+        "createdOn": "2023-06-13T00:00:00",
+        "stockId": 33
+      },
+      {
+        "id": 8,
+        "title": "Test Title 222",
+        "content": "Content 2222",
+        "createdOn": "2022-06-15T00:00:00",
+        "stockId": 33
+      },
+      {
+        "id": 10,
+        "title": "string",
+        "content": "string",
+        "createdOn": "2024-04-03T08:53:17.162",
+        "stockId": 33
+      }
+    ]
+  },
+  {
+    "id": 34,
+    "symbol": "string",
+    "companyName": "string",
+    "purchase": 0.00,
+    "lastDiv": 0.00,
+    "industry": "string",
+    "marketCap": 0,
+    "comments": []
+  },
+  {
+    "id": 35,
+    "symbol": "string",
+    "companyName": "string",
+    "purchase": 0.00,
+    "lastDiv": 0.00,
+    "industry": "string",
+    "marketCap": 0,
+    "comments": []
+  },
+  {
+    "id": 36,
+    "symbol": "string",
+    "companyName": "string",
+    "purchase": 0.00,
+    "lastDiv": 0.00,
+    "industry": "string",
+    "marketCap": 0,
+    "comments": []
+  },
+  {
+    "id": 37,
+    "symbol": "string",
+    "companyName": "string",
+    "purchase": 0.00,
+    "lastDiv": 0.00,
+    "industry": "string",
+    "marketCap": 0,
+    "comments": []
+  },
+  {
+    "id": 38,
+    "symbol": "ANGL",
+    "companyName": "Angular POST!",
+    "purchase": 0.00,
+    "lastDiv": 0.00,
+    "industry": "string",
+    "marketCap": 0,
+    "comments": []
+  },
+  {
+    "id": 39,
+    "symbol": "ANGL",
+    "companyName": "Angular POST!",
+    "purchase": 0.00,
+    "lastDiv": 0.00,
+    "industry": "string",
+    "marketCap": 0,
+    "comments": []
+  },
+  {
+    "id": 40,
+    "symbol": "ANGL",
+    "companyName": "Angular POST!",
+    "purchase": 0.00,
+    "lastDiv": 0.00,
+    "industry": "string",
+    "marketCap": 0,
+    "comments": []
+  },
+  {
+    "id": 41,
+    "symbol": "ANGL",
+    "companyName": "Angular POST!",
+    "purchase": 0.00,
+    "lastDiv": 0.00,
+    "industry": "string",
+    "marketCap": 0,
+    "comments": []
+  },
+  {
+    "id": 42,
+    "symbol": "ANGL",
+    "companyName": "Angular POST!",
+    "purchase": 0.00,
+    "lastDiv": 0.00,
+    "industry": "string",
+    "marketCap": 0,
+    "comments": []
+  },
+  {
+    "id": 43,
+    "symbol": "ANGL",
+    "companyName": "Angular POST!",
+    "purchase": 0.00,
+    "lastDiv": 0.00,
+    "industry": "string",
+    "marketCap": 0,
+    "comments": []
+  },
+  {
+    "id": 44,
+    "symbol": "ANGL",
+    "companyName": "Angular POST!",
+    "purchase": 0.00,
+    "lastDiv": 0.00,
+    "industry": "string",
+    "marketCap": 0,
+    "comments": []
+  },
+  {
+    "id": 45,
+    "symbol": "ANGL",
+    "companyName": "Angular POST!",
+    "purchase": 0.00,
+    "lastDiv": 0.00,
+    "industry": "string",
+    "marketCap": 0,
+    "comments": []
+  },
+  {
+    "id": 46,
+    "symbol": "ANGL",
+    "companyName": "Angular POST!",
+    "purchase": 0.00,
+    "lastDiv": 0.00,
+    "industry": "string",
+    "marketCap": 0,
+    "comments": []
+  },
+  {
+    "id": 47,
+    "symbol": "ANGL",
+    "companyName": "Angular POST!",
+    "purchase": 0.00,
+    "lastDiv": 0.00,
+    "industry": "string",
+    "marketCap": 0,
+    "comments": []
+  },
+  {
+    "id": 48,
+    "symbol": "ANGL",
+    "companyName": "Angular POST!",
+    "purchase": 0.00,
+    "lastDiv": 0.00,
+    "industry": "string",
+    "marketCap": 0,
+    "comments": []
+  },
+  {
+    "id": 49,
+    "symbol": "ANGL",
+    "companyName": "Angular POST!",
+    "purchase": 0.00,
+    "lastDiv": 0.00,
+    "industry": "string",
+    "marketCap": 0,
+    "comments": []
+  },
+  {
+    "id": 51,
+    "symbol": "ANGL",
+    "companyName": "Angular POST!",
+    "purchase": 0.00,
+    "lastDiv": 0.00,
+    "industry": "string",
+    "marketCap": 0,
+    "comments": []
+  },
+  {
+    "id": 52,
+    "symbol": "NG18",
+    "companyName": "ANGULAR 18 UPDATES",
+    "purchase": 222.00,
+    "lastDiv": 2.00,
+    "industry": "BEST FRAMEWORK",
+    "marketCap": 0,
+    "comments": []
+  },
+  {
+    "id": 53,
+    "symbol": "PKPA",
+    "companyName": "Prekopa",
+    "purchase": 250.00,
+    "lastDiv": 1.00,
+    "industry": "Farm",
+    "marketCap": 0,
+    "comments": []
+  },
+  {
+    "id": 54,
+    "symbol": "POST",
+    "companyName": "POST STOCK TEST",
+    "purchase": 1.00,
+    "lastDiv": 2.00,
+    "industry": "Quality Assurance",
+    "marketCap": 2000,
+    "comments": []
+  }
+]

@@ -25,12 +25,12 @@ public class StockController : ControllerBase
         return Ok(stocks);
     }
 
-    [HttpGet("{id}")]
+    [HttpGet("{id=int}")]
     public async Task<IActionResult> GetById([FromRoute] int id)
     {
         var stock = await _unitOfWork.Stock.GetByIdAsync(id);
         
-        return stock != null ? Ok(stock.ToStockDto()) : NotFound();
+        return stock != null ? Ok(stock) : NotFound();
     }
 
     [HttpPost]
@@ -41,19 +41,15 @@ public class StockController : ControllerBase
         return CreatedAtAction(nameof(GetById), new { id = stockModel.Id }, stockModel.ToStockDto());
     }
 
-    [HttpPut]
-    [Route("{id}")]
+    [HttpPut("{id=int}")]
     public async Task<IActionResult> Update([FromRoute] int id, [FromBody] UpsertStockDto stockDto)
     {
         var stockModel = await _unitOfWork.Stock.UpdateAsync(id, stockDto);
-
-        if (stockModel == null) return NotFound();
         
-        return Ok(stockModel.ToStockDto());
+        return stockModel != null ? Ok(stockModel.ToStockDto()) : NotFound();
     }
 
-    [HttpDelete]
-    [Route("{id}")]
+    [HttpDelete("{id=int}")]
     public async Task<IActionResult> Delete([FromRoute] int id)
     {
         var stockModel = await _unitOfWork.Stock.DeleteAsync(id);

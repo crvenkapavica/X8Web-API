@@ -1,6 +1,6 @@
 @X8WebAPI_HostAddress = http://localhost:5217
 
-GET {{X8WebAPI_HostAddress}}/weatherforecast/
+GET {{X8WebAPI_HostAddress}}/api/Stock/1
 Accept: application/json
 
 ###

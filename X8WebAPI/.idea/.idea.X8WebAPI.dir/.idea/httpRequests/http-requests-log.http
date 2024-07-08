@@ -1,0 +1,20 @@
+﻿GET http://localhost:5217/api/Stock/1
+Accept: application/json
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-04-03T100918.200.json
+
+###
+
+GET http://localhost:5217/api/Stock/
+Accept: application/json
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-04-03T100906.200.json
+
+###
+

@@ -42,8 +42,6 @@ public class CommentRepository : ICommentRepository
         
         commentModel.Title = commentDto.Title;
         commentModel.Content = commentDto.Content;
-        commentModel.CreatedOn = commentDto.CreatedOn;
-        commentModel.StockId = commentDto.StockId;
 
         await _db.SaveChangesAsync();
 

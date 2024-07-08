@@ -3,6 +3,7 @@ using X8WebAPI._dtos.Comment;
 using X8WebAPI._models;
 using X8WebAPI.Mappers;
 using X8WebAPI.Repository.IRepository;
+using System;
 
 namespace X8WebAPI.Controllers;
 
@@ -20,42 +21,46 @@ public class CommentController : ControllerBase
     [HttpGet]
     public async Task<IActionResult> GetAll()
     {
+        if (!ModelState.IsValid) return BadRequest(ModelState);
+        
         var comments = await _unitOfWork.Comment.GetAllAsync();
-
         return Ok(comments);
     }
 
-    [HttpGet("{id}")]
+    [HttpGet("{id=int}")]
     public async Task<IActionResult> GetById([FromRoute] int id)
     {
-        var comment = await _unitOfWork.Comment.GetByIdAsync(id);
+        if (!ModelState.IsValid) return BadRequest(ModelState);
         
+        var comment = await _unitOfWork.Comment.GetByIdAsync(id);
         return comment != null ? Ok(comment) : NotFound();
     }
-
-    [HttpPost]
-    public async Task<IActionResult> Create([FromBody] UpsertCommentDto commentDto)
+    
+    [HttpPost("{stockId=int}")]
+    public async Task<IActionResult> Create([FromRoute] int stockId, [FromBody] UpsertCommentDto commentDto)
     {
-        var commentModel = await _unitOfWork.Comment.CreateAsync(commentDto.ToCommentFromDto());
-
-        return CreatedAtAction(nameof(GetById), new {id = commentModel.Id}, commentModel.ToCommentDto());
+        if (!ModelState.IsValid) return BadRequest(ModelState);
+        if (!await _unitOfWork.Stock.Exists(stockId)) return BadRequest("The stock doesnt exist!");
+    
+        var commentModel = await _unitOfWork.Comment.CreateAsync(commentDto.ToCommentFromDto(stockId));
+        return CreatedAtAction(nameof(GetById), new { id = commentModel.Id }, commentModel.ToCommentDto());
     }
-
-    [HttpPut("{id}")]
+    
+    [HttpPut("{id=int}")]
     public async Task<IActionResult> Update([FromRoute] int id, [FromBody] UpsertCommentDto commentDto)
     {
+        if (!ModelState.IsValid) return BadRequest(ModelState);
+        
         var commentModel = await _unitOfWork.Comment.UpdateAsync(id, commentDto);
-        
-        if (commentModel == null) return NotFound();
-        
-        return Ok(commentModel.ToCommentDto());
+        return commentModel != null ? Ok(commentModel.ToCommentDto()) : NotFound();
     }
 
-    [HttpDelete("{id}")]
+    [HttpDelete("{id=int}")]
     public async Task<IActionResult> Delete(int id)
     {
+        if (!ModelState.IsValid) return BadRequest(ModelState);
+        
         var comment = await _unitOfWork.Comment.DeleteAsync(id);
-
         return NoContent();
     }
 }
